@@ -8,7 +8,11 @@
       "ios"
     ]
   },
+  "overrides": {
+    "graceful-fs": "^4.2.10"
+  },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "gulp && npm run clean-build",
     "clean-build": "trash dist/plugin.min.js && trash dist/www.min.js && trash src/browser/worker.min.js",
     "test": "npm run jshint",
